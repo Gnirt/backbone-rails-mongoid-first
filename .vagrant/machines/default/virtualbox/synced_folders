@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/philippe/dev/ruby/backbone-test","disabled":false},"v-csc-1":{"id":"v-csc-1","guestpath":"/tmp/vagrant-chef-3/chef-solo-1/cookbooks","hostpath":"/Users/philippe/dev/ruby/backbone-test/cookbooks","disabled":false}}}
