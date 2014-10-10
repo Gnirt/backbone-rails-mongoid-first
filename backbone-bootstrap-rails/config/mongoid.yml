@@ -1,0 +1,29 @@
+<% uri = (ENV['MONGOLAB_URI'] rescue nil) || (ENV['MONGOHQ_URL'] rescue nil) || nil %>
+
+test:
+ sessions:
+   default:
+     database: backbone_twitter_bootstrap_test
+     hosts:
+       - localhost:27017
+
+development:
+ sessions:
+   default:
+     database: backbone_twitter_bootstrap_development
+     hosts:
+       - localhost:27017
+
+production:
+ sessions:
+   default:
+    <% unless uri.nil? %>
+      uri: <%= uri %>
+      options:
+        skip_version_check: true
+        safe: true
+    <% else %>
+      database: backbone_twitter_bootstrap_production
+      hosts:
+       - localhost:27017
+    <% end %>
